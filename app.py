@@ -1,11 +1,11 @@
+import json
+import sys
+
 from bson import ObjectId
 from pymongo import MongoClient
 
 from flask import Flask, render_template, jsonify, request
 from flask.json.provider import JSONProvider
-
-import json
-import sys
 
 app = Flask(__name__)
 app.config.from_object("config")

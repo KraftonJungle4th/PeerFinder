@@ -1,0 +1,67 @@
+.body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.sorter-box {
+    width: 550px;
+}
+
+.trash-mode-box {
+    color: aqua;
+}
+
+.trash-mode-box:hover {
+    color: cadetblue;
+}
+
+.movie-list {
+    width: 550px;
+    margin: 20px auto 0 auto;
+}
+
+.movie-title {
+    display: inline-block;
+    color: #363636;
+    font-weight: bold;
+}
+
+.movie-title:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.card {
+    margin-bottom: 15px;
+}
+
+.movie-button1,
+.movie-button3 {
+    color: dodgerblue;
+}
+
+.movie-button1:hover,
+.movie-button3:hover {
+    color: royalblue;
+}
+
+.movie-button2,
+.movie-button4 {
+    color: firebrick;
+}
+
+.movie-button2:hover,
+.movie-button4:hover {
+    color: darkred;
+}
+
+.movie-button-left {
+    box-shadow: 0 1px 0 lavender inset;
+}
+
+.movie-button-right {
+    box-shadow: 0 1px 0 lavender inset, 1px 0 0 lavender inset;
+}

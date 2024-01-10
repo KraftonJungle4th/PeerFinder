@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 언어 -->
+    <meta charset="UTF-8">
+    <!-- 반응형 동작 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- CSS library 인 Bulma 를 포함합니다. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+    <title>동료발견기 | 로그인페이지</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f4f4f8;
+            color: #333;
+        }
+        .em {
+            width: 30px;
+            height: 45px;
+        }
+        .login-wrapper {
+            width: 400px;
+            height: 450px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 40px auto;
+            text-align: center;
+        }
+        .login-wrapper h2 {
+            font-size: 24px;
+            color: #6A24FE;
+            margin-bottom: 20px;
+        }
+        #login-form > input {
+            width: 100%;
+            height: 48px;
+            padding: 0 10px;
+            margin-bottom: 16px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        #login-form > input::placeholder {
+            color: #999;
+        }
+        #login-form > input[type="submit"] {
+            color: #fff;
+            background-color: #6A24FE;
+            margin-top: 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        #login-form > input[type="submit"]:hover {
+            background-color: #5821c4;
+        }
+        .btn-group button {
+            margin: 5px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-size: 15px;
+        }
+        .btn-group button:hover {
+            background-color: #5821c4;
+        }
+
+        .btn-secondary.font-bold.text-markcraft {
+
+            padding: .375rem .75rem;
+            font-size: 1rem;  
+            line-height: 1.5; 
+        } 
+
+    </style>
+
+    <script>
+
+        let LikeMode = false
+
+        $(document).ready(function () {
+                // 1. 프로필 보여주는 함수
+                //showMovie()
+
+                // 현재 적용되고 있는 정렬 방식의 버튼에 눌려져 보이는 효과를 줍니다.
+                //displaySorter()
+
+                // 좋아요 모드에 따라 메뉴를 다르게 바꿔줍니다.
+                //displayTrashMode(LikeMode)
+        });
+
+        function Login(){
+                // 1. id,pw 입력값을 가져온다.
+                // 2. 입력값이 빈칸이면 if(입력값=='') alert('입력하세요!') 띄우기
+                // 3. db에서 id를 찾는다.
+                // 4. id가 있다면 pw 입력값과 id의 pw값이 동일한지 확인 ,id가 없다면 alert('해당하는 아이디가 없습니다!')
+                // 5. 비밀번호가 맞다면 로그인, 다르다면 alert('비밀번호가 틀렸습니다.')
+            let UserId = $('#userEmail').val();
+            let UserPw = $('#userPassword').val();
+            console.log(UserId)
+            if(UserId == '' || UserPw == ''){
+                alert('빈칸이 존재합니다!')
+            }
+            else{
+                $.ajax({
+                    type: "POST",
+                    url: "/",
+                    data: { _email: UserId, _password: UserPw},
+                    success: function (response) {
+                        
+                    }
+                });
+            }
+        }
+        function FindId(){
+            // 1. 페이지 이동
+            // 2. 이름과 이메일 주소 입력값을 가져온다.
+            // 3. 입력값이 빈칸이면 if(입력값=='') alert('입력하세요!') 띄우기
+            // 4. db에 이름을 찾고 이메일 입력값과 이름의 입력값이 같은지 확인, 이메일이 없다면('해당하는 이메일이 없습니다!')
+            // 5. 이메일이 맞다면 alert('아이디값')
+            
+        }
+
+        function FindPw(){
+            // 1. 페이지 이동
+            // 2. 이름과 이메일 주소 아이디 입력값을 가져온다.
+            // 3. 입력값이 빈칸이면 if(입력값=='') alert('입력하세요!') 띄우기
+            // 4. db에 이름을 찾고 이메일 입력값과 이름의 입력값이 같은지 확인, 아이디도 확인 이메일이 없다면('해당하는 이메일이 없습니다!')
+            // 5. 이메일과 아이디가 맞다면 alert('아이디값')
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="login-wrapper">
+        <h2>동료발견기</h2>
+        <div class="em"></div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <script>alert("{{messages}}") </script>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" id="login-form">
+            <input type="email" id="user_id" name ="user_id" placeholder="이메일 주소를 입력해 주세요.">
+            <input type="password" id="user_pw" name = "user_pw" placeholder="비밀번호를 입력해 주세요.">
+            <label for="remember-check">
+                <input type="checkbox" id="remember-check">아이디 저장하기
+            </label>
+            <input type="submit" id="loginBtn" value="로그인" /> 
+        </form>
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" >아이디 찾기</button>
+            <button type="button" class="btn btn-secondary">비밀번호 찾기</button>
+            <a href="/signup" class="btn btn-secondary font-bold text-markcraft link">회원가입</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -38,9 +38,12 @@
             text-align: center;
         }
         .login-wrapper h2 {
-            font-size: 24px;
+            font-size: 40px;
             color: #6A24FE;
             margin-bottom: 20px;
+            font-weight: bold; /* 글씨 진하게 */
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 30px;
         }
         #login-form > input {
             width: 100%;
@@ -63,22 +66,23 @@
         #login-form > input[type="submit"]:hover {
             background-color: #5821c4;
         }
-        .btn-group button {
+
+        .auth-link {
+            color: #6A24FE;
+            /* background-color: #6A24FE; */
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold; /* 글씨 진하게 */
+            text-decoration: none; /* 밑줄 제거 */
             margin: 5px;
-            border-radius: 4px;
             transition: background-color 0.3s;
-            font-size: 15px;
-        }
-        .btn-group button:hover {
-            background-color: #5821c4;
+            font-size: 13px;
+            text-align: right;
         }
 
-        .btn-secondary.font-bold.text-markcraft {
-
-            padding: .375rem .75rem;
-            font-size: 1rem;  
-            line-height: 1.5; 
-        } 
+        .auth-link:hover {
+            color: #5821c4;
+        }
 
     </style>
 
@@ -87,7 +91,14 @@
         let LikeMode = false
 
         $(document).ready(function () {
-                
+                // 1. 프로필 보여주는 함수
+                //showMovie()
+
+                // 현재 적용되고 있는 정렬 방식의 버튼에 눌려져 보이는 효과를 줍니다.
+                //displaySorter()
+
+                // 좋아요 모드에 따라 메뉴를 다르게 바꿔줍니다.
+                //displayTrashMode(LikeMode)
         });
 
         function Login(){
@@ -146,18 +157,11 @@
         <form method="POST" id="login-form">
             <input type="email" id="user_id" name ="user_id" placeholder="이메일 주소를 입력해 주세요.">
             <input type="password" id="user_pw" name = "user_pw" placeholder="비밀번호를 입력해 주세요.">
-            <label for="remember-check">
-                <input type="checkbox" id="remember-check">아이디 저장하기
-            </label>
+            <a href="/password-reset" class="auth-link">비밀번호를 잊으셨나요?</a> 
+            <!-- 여기 타고가는 링크는 수정 -->
             <input type="submit" id="loginBtn" value="로그인" /> 
         </form>
-
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary" >아이디 찾기</button>
-            <button type="button" class="btn btn-secondary">비밀번호 찾기</button>
-            <a href="/signup" class="btn btn-secondary font-bold text-markcraft link">회원가입</a>
-        </div>
+        회원이 아니신가요?<a href="/signup" class="auth-link">회원가입</a>
     </div>
-
 </body>
 </html>

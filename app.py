@@ -74,7 +74,7 @@ def get_home():
 
 @app.route("/signup", methods=["GET"])
 def getSignUp():
-    return render_template("auth/signup.html")
+    return render_template("pages/signup.html")
 
 
 ###############################################

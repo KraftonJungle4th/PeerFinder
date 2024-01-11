@@ -14,6 +14,8 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> 
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
         <title>동료발견기 | 회원가입</title>
         
@@ -38,9 +40,12 @@
             text-align: center;
         }
         .signup-wrapper h2 {
-            font-size: 24px;
+            font-size: 40px;
             color: #6A24FE;
             margin-bottom: 20px;
+            font-weight: bold; /* 글씨 진하게 */
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 30px;
         }
         #signup-form > input {
             width: 100%;
@@ -63,14 +68,24 @@
         #signup-form > input[type="submit"]:hover {
             background-color: #5821c4;
         }
-        .btn-group button {
+
+        .auth-link {
+            color: #6A24FE;
+            /* background-color: #6A24FE; */
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold; /* 글씨 진하게 */
+            text-decoration: none; /* 밑줄 제거 */
             margin: 5px;
-            border-radius: 4px;
             transition: background-color 0.3s;
-            font-size: 15px;
         }
-        .btn-group button:hover {
-            background-color: #5821c4;
+
+        .auth-link:hover {
+            color: #5821c4;
+        }
+
+        .align-right {
+            text-align: right;
         }
     </style>
 
@@ -126,8 +141,8 @@
         {% endwith %}
         <div class="signup-wrapper">
             <h2>동료발견기</h2>
-            <div class="em">
-            </div>
+            <!-- <div class="em">
+            </div> -->
         
             <form method="POST" id="signup-form">
                 <!-- <label for="username">Email</label> -->
@@ -138,6 +153,8 @@
                 <input type="password" id="user_conpw" oninput="checkPasswordMatch()" placeholder="비밀번호를 다시 한번 입력해주세요!" required>
                 <input type="submit" id="signup_btn" value="회원가입" />
             </form>
+            이미 회원이신가요? <a href="/signup" class="auth-link">로그인하기</a>
+            <!-- 여기도 링크수정!! -->
 
         </div>
 

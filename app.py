@@ -80,7 +80,7 @@ def getSignUp():
 def getprofile():
     return render_template("pages/profile.html")
 
-@app.route("/signup", methods=["GET"])
+@app.route("/myprofile", methods=["GET"])
 def getmyprofile():
     return render_template("pages/myprofile.html")
 

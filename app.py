@@ -76,6 +76,14 @@ def get_home():
 def getSignUp():
     return render_template("pages/signup.html")
 
+@app.route("/profile", methods=["GET"])
+def getprofile():
+    return render_template("pages/profile.html")
+
+@app.route("/signup", methods=["GET"])
+def getmyprofile():
+    return render_template("pages/myprofile.html")
+
 
 ###############################################
 
@@ -108,7 +116,6 @@ def signup():
         return redirect(url_for("get_home"))
     else:
         flash("이미 존재하는 아이디 입니다.")
-
         return redirect(url_for("getSignUp"))
 
 
@@ -129,7 +136,7 @@ def user_login():
             refresh_token = create_refresh_token(identity=user_id)
             # session['logged_in'] = True
             set_access_cookies(response, access_token)
-            return response
+            return redirect(url_for("getprofile"))
         else:
             return jsonify({"result": "fail", "message": "틀린 비밀번호입니다."})
 

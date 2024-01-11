@@ -1,164 +1,164 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <!-- 언어 -->
-    <meta charset="UTF-8">
-    <!-- 반응형 동작 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <!-- CSS library 인 Bulma 를 포함합니다. -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> 
-    <!-- 구글폰트 -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <head>
+        <!-- 언어 -->
+        <meta charset="UTF-8">
+        <!-- 반응형 동작 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <!-- CSS library 인 Bulma 를 포함합니다. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> 
+        <!-- 구글폰트 -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        <title>동료발견기 | 회원가입</title>
-        
-    <style>
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #f4f4f8;
-            color: #333;
-        }
-        .em {
-            width: 30px;
-            height: 45px;
-        }
-        .signup-wrapper {
-            width: 400px;
-            height: 450px;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin: 40px auto;
-            text-align: center;
-        }
-        .signup-wrapper h2 {
-            font-size: 40px;
-            color: #6A24FE;
-            margin-bottom: 20px;
-            font-weight: bold; /* 글씨 진하게 */
-            font-family: 'Roboto', sans-serif;
-            margin-bottom: 30px;
-        }
-        #signup-form > input {
-            width: 100%;
-            height: 48px;
-            padding: 0 10px;
-            margin-bottom: 16px;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-        }
-        #signup-form > input::placeholder {
-            color: #999;
-        }
-        #signup-form > input[type="submit"] {
-            color: #fff;
-            background-color: #6A24FE;
-            margin-top: 20px;
-            border-radius: 6px;
-            transition: background-color 0.3s;
-        }
-        #signup-form > input[type="submit"]:hover {
-            background-color: #5821c4;
+            <title>동료발견기 | 회원가입</title>
+            
+        <style>
+            body {
+                font-family: 'Noto Sans KR', sans-serif;
+                background-color: #f4f4f8;
+                color: #333;
+            }
+            .em {
+                width: 30px;
+                height: 45px;
+            }
+            .signup-wrapper {
+                width: 400px;
+                height: 450px;
+                padding: 40px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                margin: 40px auto;
+                text-align: center;
+            }
+            .signup-wrapper h2 {
+                font-size: 40px;
+                color: #6A24FE;
+                margin-bottom: 20px;
+                font-weight: bold; /* 글씨 진하게 */
+                font-family: 'Roboto', sans-serif;
+                margin-bottom: 30px;
+            }
+            #signup-form > input {
+                width: 100%;
+                height: 48px;
+                padding: 0 10px;
+                margin-bottom: 16px;
+                border-radius: 6px;
+                border: 1px solid #ddd;
+            }
+            #signup-form > input::placeholder {
+                color: #999;
+            }
+            #signup-form > input[type="submit"] {
+                color: #fff;
+                background-color: #6A24FE;
+                margin-top: 20px;
+                border-radius: 6px;
+                transition: background-color 0.3s;
+            }
+            #signup-form > input[type="submit"]:hover {
+                background-color: #5821c4;
+            }
+
+            .auth-link {
+                color: #6A24FE;
+                /* background-color: #6A24FE; */
+                padding: 10px 15px;
+                border-radius: 6px;
+                font-weight: bold; /* 글씨 진하게 */
+                text-decoration: none; /* 밑줄 제거 */
+                margin: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .auth-link:hover {
+                color: #5821c4;
+            }
+
+            .align-right {
+                text-align: right;
+            }
+        </style>
+
+        <script>
+        function SignUp(){
+
         }
 
-        .auth-link {
-            color: #6A24FE;
-            /* background-color: #6A24FE; */
-            padding: 10px 15px;
-            border-radius: 6px;
-            font-weight: bold; /* 글씨 진하게 */
-            text-decoration: none; /* 밑줄 제거 */
-            margin: 5px;
-            transition: background-color 0.3s;
-        }
+        function CreateUser(){
+            // 1. id,pw 입력값을 가져온다.
+            // 2. 입력값이 빈칸이면 if(입력값=='') alert('입력하세요!') 띄우기
+            // 3. db에서 id를 받아와서 같은 id라면 alert('같은 이름의 아이디가 존재합니다!') 띄우기
+            // 4. 비밀번호가 서로 다르면 alert('비밀번호가 일치하지 않습니다.') 띄우기
+            // 5. 문제가 없다면 post로 db에 등록.
 
-        .auth-link:hover {
-            color: #5821c4;
-        }
+            let UserEmail = $('#userEmail').val();
+            let UserPw = $('#userPassword').val();
+            let UserconfirmPW = $('#userconfirmPassword').val();
+            console.log(UserEmail)
+            if(UserPw != UserconfirmPW){
+                alert('비밀번호가 일치하지 않습니다.')
+            }else{
+                $.ajax({
+                    type: "POST",
+                    url: "/SignUp",
+                    data: { _email: UserEmail,_password:UserPw },
+                    success: function (response) {
+                        if (response['result'] == 'success') {
+                            // 2. '좋아요 완료!' 얼럿을 띄웁니다.
+                            alert('좋아요 완료!')
 
-        .align-right {
-            text-align: right;
-        }
-    </style>
-
-    <script>
-    function SignUp(){
-
-    }
-
-    function CreateUser(){
-        // 1. id,pw 입력값을 가져온다.
-        // 2. 입력값이 빈칸이면 if(입력값=='') alert('입력하세요!') 띄우기
-        // 3. db에서 id를 받아와서 같은 id라면 alert('같은 이름의 아이디가 존재합니다!') 띄우기
-        // 4. 비밀번호가 서로 다르면 alert('비밀번호가 일치하지 않습니다.') 띄우기
-        // 5. 문제가 없다면 post로 db에 등록.
-
-        let UserEmail = $('#userEmail').val();
-        let UserPw = $('#userPassword').val();
-        let UserconfirmPW = $('#userconfirmPassword').val();
-        console.log(UserEmail)
-        if(UserPw != UserconfirmPW){
-            alert('비밀번호가 일치하지 않습니다.')
-        }else{
-            $.ajax({
-                type: "POST",
-                url: "/SignUp",
-                data: { _email: UserEmail,_password:UserPw },
-                success: function (response) {
-                    if (response['result'] == 'success') {
-                        // 2. '좋아요 완료!' 얼럿을 띄웁니다.
-                        alert('좋아요 완료!')
-
-                        // 3. 변경된 정보를 반영하기 위해 새로고침합니다.
-                        //showMovie()
-                    } else {
-                        alert('좋아요 실패ㅠㅠ')
+                            // 3. 변경된 정보를 반영하기 위해 새로고침합니다.
+                            //showMovie()
+                        } else {
+                            alert('좋아요 실패ㅠㅠ')
+                        }
                     }
-                }
-            });
+                });
+            }
         }
-    }
-    </script>
+        </script>
 
-</head>
-<main>
-    <body>
-        <!--Jinja2 에러 메세지 -->
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}         
-                <input type="hidden" name="Error" id="ErrorInput" value="{{message}}">
-            {% endfor %}
-        {% endif %}
-        {% endwith %}
-        <div class="signup-wrapper">
-            <h2>동료발견기</h2>
-            <!-- <div class="em">
-            </div> -->
-        
-            <form method="POST" id="signup-form">
-                <!-- <label for="username">Email</label> -->
-                <input type="email" id="user_id" name ="user_id" placeholder="이메일을 입력해주세요!" required>
-                <!-- <label for="password">PW</label> -->
-                <input type="password" id="user_pw" name = "user_pw" placeholder="비밀번호를 입력해주세요!" required>
-                <!-- <label for="confirmPassword">PW 확인:</label> -->
-                <input type="password" id="user_conpw" oninput="checkPasswordMatch()" placeholder="비밀번호를 다시 한번 입력해주세요!" required>
-                <input type="submit" id="signup_btn" value="회원가입" />
-            </form>
-            이미 회원이신가요? <a href="/signup" class="auth-link">로그인하기</a>
-            <!-- 여기도 링크수정!! -->
+    </head>
+    <main>
+        <body>
+            <!--Jinja2 에러 메세지 -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}         
+                    <input type="hidden" name="Error" id="ErrorInput" value="{{message}}">
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <div class="signup-wrapper">
+                <h2>동료발견기</h2>
+                <!-- <div class="em">
+                </div> -->
+            
+                <form method="POST" id="signup-form">
+                    <!-- <label for="username">Email</label> -->
+                    <input type="email" id="user_id" name ="user_id" placeholder="이메일을 입력해주세요!" required>
+                    <!-- <label for="password">PW</label> -->
+                    <input type="password" id="user_pw" name = "user_pw" placeholder="비밀번호를 입력해주세요!" required>
+                    <!-- <label for="confirmPassword">PW 확인:</label> -->
+                    <input type="password" id="user_conpw" oninput="checkPasswordMatch()" placeholder="비밀번호를 다시 한번 입력해주세요!" required>
+                    <input type="submit" id="signup_btn" value="회원가입" />
+                </form>
+                이미 회원이신가요? <a href="/signup" class="auth-link">로그인하기</a>
+                <!-- 여기도 링크수정!! -->
 
-        </div>
+            </div>
 
 
-    </body>
-</main>
+        </body>
+    </main>
 </html>

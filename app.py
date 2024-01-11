@@ -141,6 +141,7 @@ def user_login():
             return jsonify({"result": "fail", "message": "틀린 비밀번호입니다."})
 
 
+
 # 로그인 필요한 api 접근
 @app.route("/protected", methods=["GET"])
 @jwt_required()

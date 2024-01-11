@@ -23,7 +23,7 @@
             }
             .profile-wrapper {
                 width: 400px;
-                height: 450px;
+                height: 680px;
                 padding: 40px;
                 background-color: #fff;
                 border-radius: 10px;
@@ -142,12 +142,13 @@
                 <input type="file" name="profile-pic" accept="image/*">
             </div>
             <!-- 프로필 정보 입력 폼 -->
-            <form method="post" action="서버의url" class="profile-form">
-                <input type="text" name="name" placeholder="이름">
-                <input type="number" name="age" placeholder="나이">
-                <input type="text" name="major" placeholder="전공 여부(O,X)">
-                <input type="text" name="techStack" placeholder="기술스택, 경력">
-                <textarea name="introduction" placeholder="나를 간단하게 소개해주세요."></textarea>
+            <form method="POST"  class="profile-form">
+                <input type="email" name="user_id" id = "user_id" placeholder="사용한 아이디를 입력해주세요.">
+                <input type="text" name="user_name" id = "user_name" placeholder="이름">
+                <input type="number" name="user_ages" id = "user_ages" placeholder="나이">
+                <input type="text" name="user_major" id ="user_major" placeholder="전공 여부(O,X)">
+                <input type="text" name="user_techStack" id ="user_techStack" placeholder="기술스택, 경력">
+                <textarea name="user_introduction" id="user_introduction" placeholder="나를 간단하게 소개해주세요."></textarea>
                 <input type="submit" class="submit-btn" value="등록">
             </form>
         </div>

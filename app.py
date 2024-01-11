@@ -184,6 +184,30 @@ def refresh_expiring_jwts(response):
     except (RuntimeError, KeyError):
         return response
 
+@app.route("/myprofile", methods=["POST"])
+def post_myprofile():
+    db.Users.update_one({'user_id':request.form['user_id']},{'$set':{'Name':request.form['user_name']}})
+    db.Users.update_one({'user_id':request.form['user_id']},{'$set':{'Ages':request.form['user_ages']}})
+    db.Users.update_one({'user_id':request.form['user_id']},{'$set':{'MajorStatus':request.form['user_major']}})
+    db.Users.update_one({'user_id':request.form['user_id']},{'$set':{'Stack':request.form['user_techStack']}})
+    db.Users.update_one({'user_id':request.form['user_id']},{'$set':{'FreeWord':request.form['user_introduction']}})
+    db.Users.update_one({'user_id':request.form['user_id']},{'$set':{'ProfileEdit':True}})
+    return redirect(url_for("getprofile"))
+    # user_name = request.form['user_name']
+    # user_ages = request.form['user_ages']
+    # user_major = request.form['user_major']
+    # user_techStack = request.form['user_techStack']
+    
+
+
+    # db.Users.update_many(
+    #     {"Name" : request.form['user_name']},
+    #     {"Ages" : request.form['user_ages']},
+    #     {"MajorStatus" : request.form['user_major']},
+    #     {"Stack" : request.form['user_techStack']},
+    #     {"FreeWord" : request.form['user_introduction']},
+    #     {'ProfileEdit': True},
+    # )
 
 if __name__ == "__main__":
     print(sys.executable)

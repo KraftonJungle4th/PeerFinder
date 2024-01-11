@@ -18,6 +18,7 @@ from datetime import datetime, timedelta, timezone
 from flask.json.provider import JSONProvider
 
 
+
 # flask 객체 생성
 app = Flask(__name__)
 app.config.from_object("config")
@@ -193,21 +194,12 @@ def post_myprofile():
     db.Users.update_one({'user_id':request.form['user_id']},{'$set':{'FreeWord':request.form['user_introduction']}})
     db.Users.update_one({'user_id':request.form['user_id']},{'$set':{'ProfileEdit':True}})
     return redirect(url_for("getprofile"))
-    # user_name = request.form['user_name']
-    # user_ages = request.form['user_ages']
-    # user_major = request.form['user_major']
-    # user_techStack = request.form['user_techStack']
     
-
-
-    # db.Users.update_many(
-    #     {"Name" : request.form['user_name']},
-    #     {"Ages" : request.form['user_ages']},
-    #     {"MajorStatus" : request.form['user_major']},
-    #     {"Stack" : request.form['user_techStack']},
-    #     {"FreeWord" : request.form['user_introduction']},
-    #     {'ProfileEdit': True},
-    # )
+@app.route('/profile/list', methods=["GET"])
+def show_profiles():
+    profiles = list(db.Users.find({"ProfileEdit":True},{'user_id':0,'user_pw':0}))
+    print(profiles)
+    return jsonify({"result": "success",'profiles_list':profiles})
 
 if __name__ == "__main__":
     print(sys.executable)

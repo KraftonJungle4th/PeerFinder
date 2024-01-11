@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulma 웹사이트</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <style>
+        .purple-background {
+            background-color: #6A24FE; /* 보라색 배경 */
+            color: white;
+        }
+        .header-footer {
+            text-align: center;
+            height: 60px; /* 헤더와 풋터 높이 설정 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar, .footer {
+            padding: 10px 0; /* 상하 패딩 조정 */
+        }
+        .navbar-brand, .footer .content {
+            width: 100%; /* 전체 너비 사용 */
+            justify-content: space-between; /* 요소들 간격 조정 */
+        }
+        .navbar-item, .navbar-brand button {
+            color: white; /* 흰색 텍스트 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 헤더 부분 -->
+    <header class="navbar purple-background">
+        <div class="container">
+            <div class="navbar-brand">
+                <button class="button is-success is-outlined">전체보기</button>
+                <div>
+                    <button class="button is-success is-outlined">MY</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 본문 내용 -->
+    <section class="section">
+        <div class="container">
+            <h1 class="title">안녕하세요!</h1>
+        </div>
+    </section>
+
+    <!-- 풋터 부분 -->
+    <footer class="footer purple-background">
+        <div class="content has-text-centered">
+            <p>&copy; 2024. Krafton Jungle: 7조</p>
+        </div>
+    </footer>
+
+</body>
+</html>

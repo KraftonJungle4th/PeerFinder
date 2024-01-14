@@ -37,7 +37,6 @@ bcrypt = Bcrypt(app)
 # JWT 매니저 활성화
 jwt = JWTManager(app)
 
-# localhost용 코드
 client = MongoClient(app.config["MONGO_DB_URI"])
 db = client.get_default_database()
 

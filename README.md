@@ -7,6 +7,10 @@
 
 2024.01.08(월) 15:30 ~ 2024.01.11(목) 14:00
 
+## 발표 자료
+- [기획 발표 pdf](https://github.com/KraftonJungle4th/PeerFinder/files/13932248/default.pdf)
+- [최종 발표 pdf](https://github.com/KraftonJungle4th/PeerFinder/files/13932253/516._7_._.2.pdf)
+
 ## 기획 의도
 
 - 매주 팀이 바뀌는 정글 분만 아니라 앞으로 수많은 자기소개를 해야 할 정글러 분들을 위해 기획했습니다.

@@ -49,7 +49,7 @@
 
 - 개념 이해와 기존 로그인을 JWT로 변경
 
-### 2. [Jinja2](./docs/Jinja2.mda)
+### 2. [Jinja2](./docs/Jinja2.md)
 
 - SSR 개념 이해 및 적용
 

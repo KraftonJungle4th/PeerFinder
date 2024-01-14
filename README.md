@@ -8,8 +8,13 @@
 2024.01.08(월) 15:30 ~ 2024.01.11(목) 14:00
 
 ## 발표 자료
+
 - [기획 발표 pdf](https://github.com/KraftonJungle4th/PeerFinder/files/13932248/default.pdf)
 - [최종 발표 pdf](https://github.com/KraftonJungle4th/PeerFinder/files/13932253/516._7_._.2.pdf)
+
+## 프로젝트 관리
+
+- [Github Projects](https://github.com/orgs/KraftonJungle4th/projects/2)
 
 ## 기획 의도
 
